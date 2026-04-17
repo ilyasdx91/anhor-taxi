@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.cache/
+.env
+.env.local
+.claude/
+*.log
+
+# Дизайн-материалы Яндекс (тяжёлые TIF/AI/PSD — не нужны в репо)
+assets/
+*.tif
+*.tiff
+*.ai
+*.psd

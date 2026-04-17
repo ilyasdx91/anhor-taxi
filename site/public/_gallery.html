@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Taxi candidates</title>
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        background: #0a0a0a;
+        color: #fff;
+        font-family: system-ui, sans-serif;
+        margin: 0;
+        padding: 24px;
+      }
+      h1 { margin: 0 0 20px; font-weight: 700; font-size: 22px; }
+      .group-title {
+        font-size: 13px;
+        color: #a0a0a0;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin: 24px 0 12px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .card {
+        background: #141414;
+        border: 1px solid #2a2a2a;
+        border-radius: 16px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+      .name {
+        font-size: 14px;
+        color: #ffd400;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        text-align: center;
+      }
+      .visual {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        background: #0a0a0a;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+      }
+      .visual img {
+        width: 80%;
+        height: 80%;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Кандидаты на hero-такси</h1>
+
+    <div class="group-title">Emoji стиль (плоские)</div>
+    <div class="grid">
+      <div class="card"><span class="name">1 · MS Fluent flat</span>
+        <div class="visual"><img src="/images/_candidates/fluent-taxi.svg" /></div></div>
+      <div class="card"><span class="name">2 · Google Noto</span>
+        <div class="visual"><img src="/images/_candidates/noto-taxi.svg" /></div></div>
+      <div class="card"><span class="name">3 · Twemoji</span>
+        <div class="visual"><img src="/images/_candidates/twemoji-taxi.svg" /></div></div>
+      <div class="card"><span class="name">4 · Mozilla FxEmoji</span>
+        <div class="visual"><img src="/images/_candidates/fxemoji-taxi.svg" /></div></div>
+      <div class="card"><span class="name">5 · EmojiOne</span>
+        <div class="visual"><img src="/images/_candidates/emojione-taxi.svg" /></div></div>
+      <div class="card"><span class="name">6 · OpenMoji</span>
+        <div class="visual"><img src="/images/_candidates/openmoji-taxi.svg" /></div></div>
+      <div class="card"><span class="name">7 · Noto v1 (old)</span>
+        <div class="visual"><img src="/images/_candidates/noto-v1-taxi.svg" /></div></div>
+    </div>
+
+    <div class="group-title">3D / с объёмом (максимум реализма)</div>
+    <div class="grid">
+      <div class="card"><span class="name">8 · MS Fluent 3D taxi</span>
+        <div class="visual"><img src="/images/_candidates/fluent3d-taxi.svg" /></div></div>
+      <div class="card"><span class="name">9 · MS Fluent 3D car</span>
+        <div class="visual"><img src="/images/_candidates/fluent3d-car.svg" /></div></div>
+      <div class="card"><span class="name">10 · MS Fluent 3D SUV</span>
+        <div class="visual"><img src="/images/_candidates/fluent3d-sport.svg" /></div></div>
+      <div class="card"><span class="name">11 · Streamline taxi</span>
+        <div class="visual"><img src="/images/_candidates/streamline-taxi.svg" /></div></div>
+      <div class="card"><span class="name">12 · Streamline car</span>
+        <div class="visual"><img src="/images/_candidates/streamline-car.svg" /></div></div>
+    </div>
+  </body>
+</html>

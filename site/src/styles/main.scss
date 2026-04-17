@@ -1,0 +1,22 @@
+// ============================================================================
+// Anhor Taxi — корневой импорт стилей
+// ============================================================================
+
+@use 'tokens';
+@use 'reset';
+@use 'mixins' as *;
+
+@use 'base/typography';
+@use 'base/layout';
+
+@use 'components/button';
+
+@use 'sections/header';
+@use 'sections/hero';
+@use 'sections/perks';
+@use 'sections/calculator';
+@use 'sections/compare';
+@use 'sections/start';
+@use 'sections/reviews';
+@use 'sections/faq';
+@use 'sections/footer';

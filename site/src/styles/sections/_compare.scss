@@ -1,0 +1,57 @@
+// ============================================================================
+// Сравнительная таблица
+// ============================================================================
+@use '../mixins' as *;
+
+.compare {
+  @include section-padding;
+
+  &__inner {
+    @include container;
+  }
+
+  &__table-wrap {
+    margin-top: var(--space-6);
+    overflow-x: auto;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    background: var(--bg-elevated);
+    box-shadow: var(--shadow-card);
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 540px;
+
+    th,
+    td {
+      padding: var(--space-3) var(--space-4);
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    thead th {
+      font-size: var(--fs-small);
+      font-weight: var(--fw-bold);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      background: var(--bg-muted);
+    }
+
+    tbody tr:last-child th,
+    tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    td:nth-child(2) {
+      font-weight: var(--fw-bold);
+      color: var(--accent);
+    }
+
+    td:nth-child(3) {
+      color: var(--text-muted);
+    }
+  }
+}

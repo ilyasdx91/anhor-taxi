@@ -1,0 +1,90 @@
+// ============================================================================
+// Калькулятор дохода
+// ============================================================================
+@use '../mixins' as *;
+
+.calculator {
+  @include section-padding;
+  background: var(--bg-muted);
+
+  &__inner {
+    @include container;
+    display: grid;
+    gap: var(--space-6);
+    align-items: start;
+
+    @include media('lg') {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--fs-small);
+    color: var(--text-muted);
+
+    output {
+      font-weight: var(--fw-bold);
+      color: var(--text);
+    }
+  }
+
+  &__slider {
+    width: 100%;
+    accent-color: var(--accent);
+  }
+
+  &__select {
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    font-family: inherit;
+    font-size: var(--fs-body);
+  }
+
+  &__result {
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  &__result-label {
+    font-size: var(--fs-small);
+    color: var(--text-muted);
+  }
+
+  &__result-amount {
+    font-size: clamp(40px, 5vw, var(--fs-h1));
+    font-weight: var(--fw-bold);
+    background: var(--anhor-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    line-height: 1;
+  }
+
+  &__result-note {
+    font-size: var(--fs-small);
+    color: var(--text-muted);
+  }
+}

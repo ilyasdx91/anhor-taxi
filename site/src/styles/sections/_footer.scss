@@ -1,0 +1,89 @@
+// ============================================================================
+// Footer
+// ============================================================================
+@use '../mixins' as *;
+
+.footer {
+  padding-block: var(--space-7);
+  // Футер всегда тёмный — в обеих темах. Это даёт сильный визуальный якорь
+  // внизу страницы и избавляет от проблемы инверсии лого.
+  background: #0A0A0A;
+  color: #F7F7F7;
+
+  &__inner {
+    @include container;
+    display: grid;
+    gap: var(--space-6);
+
+    @include media('md') {
+      grid-template-columns: 1.4fr 1fr 1fr;
+    }
+  }
+
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+  }
+
+  &__logo {
+    width: auto;
+
+    &--anhor {
+      height: 96px;
+    }
+
+    &--partner {
+      height: 60px;
+    }
+  }
+
+  &__tagline {
+    font-size: var(--fs-small);
+    opacity: 0.7;
+  }
+
+  &__col-title {
+    font-size: var(--fs-small);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.6;
+    margin-bottom: var(--space-3);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+
+    a {
+      color: inherit;
+      opacity: 0.85;
+      transition: opacity var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+
+      &:hover {
+        opacity: 1;
+        color: var(--accent);
+      }
+    }
+  }
+
+  &__meta {
+    grid-column: 1 / -1;
+    padding-top: var(--space-4);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: var(--fs-micro);
+    opacity: 0.5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--space-2);
+  }
+}

@@ -1,0 +1,72 @@
+// ============================================================================
+// Кнопки
+// ============================================================================
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  // Primary — главный CTA, жёлтый Anhor
+  &--primary {
+    background: var(--accent);
+    color: var(--accent-contrast);
+
+    &:hover {
+      background: var(--accent-hover);
+      color: #FFFFFF;
+    }
+  }
+
+  // Secondary — прозрачный с рамкой
+  &--secondary {
+    background: transparent;
+    color: var(--text);
+    border: 2px solid var(--border-strong);
+
+    &:hover {
+      background: var(--bg-muted);
+      border-color: var(--text);
+    }
+  }
+
+  // Ghost — почти невидимый, для хедера
+  &--ghost {
+    background: transparent;
+    color: var(--text);
+
+    &:hover {
+      background: var(--bg-muted);
+    }
+  }
+
+  &--lg {
+    padding: var(--space-4) var(--space-6);
+    font-size: var(--fs-lead);
+  }
+
+  &--sm {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--fs-small);
+  }
+}

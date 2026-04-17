@@ -1,0 +1,69 @@
+// ============================================================================
+// Шрифты и базовая типографика
+// ============================================================================
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/NotoSans-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Sans ExtraCondensed';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/NotoSans-ExtraCondensedLight.ttf') format('truetype');
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-normal);
+  color: var(--text);
+  background: var(--bg);
+  transition: background var(--dur-base) var(--ease-out),
+    color var(--dur-base) var(--ease-out);
+}
+
+h1,
+.h1 {
+  font-size: clamp(40px, 6vw, var(--fs-display));
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.02em;
+}
+
+h2,
+.h2 {
+  font-size: clamp(28px, 4vw, var(--fs-h2));
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.01em;
+}
+
+h3,
+.h3 {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+}
+
+h4,
+.h4 {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-bold);
+}
+
+.lead {
+  font-size: var(--fs-lead);
+  color: var(--text-muted);
+  line-height: var(--lh-relaxed);
+}
+
+.micro {
+  font-family: var(--font-micro);
+  font-size: var(--fs-micro);
+  font-weight: var(--fw-light);
+  color: var(--text-muted);
+}

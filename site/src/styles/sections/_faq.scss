@@ -1,0 +1,66 @@
+// ============================================================================
+// FAQ — аккордеон
+// ============================================================================
+@use '../mixins' as *;
+
+.faq {
+  @include section-padding;
+  background: var(--bg-muted);
+
+  &__inner {
+    @include container;
+    max-width: 860px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    margin-top: var(--space-6);
+  }
+}
+
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+  overflow: hidden;
+
+  &[open] {
+    border-color: var(--accent);
+  }
+
+  &__question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    font-weight: var(--fw-bold);
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: '+';
+      font-size: var(--fs-h3);
+      line-height: 1;
+      color: var(--accent);
+      transition: transform var(--dur-base) var(--ease-out);
+    }
+  }
+
+  &[open] &__question::after {
+    transform: rotate(45deg);
+  }
+
+  &__answer {
+    padding: 0 var(--space-4) var(--space-4);
+    color: var(--text-muted);
+    line-height: var(--lh-relaxed);
+  }
+}

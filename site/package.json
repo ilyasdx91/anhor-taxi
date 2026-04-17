@@ -1,0 +1,19 @@
+{
+  "name": "anhor-landing",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Лендинг для привлечения водителей в таксопарк Anhor (партнёр Яндекс Про, Ташкент)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0",
+    "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5"
+  }
+}

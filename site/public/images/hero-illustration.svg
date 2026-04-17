@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 560" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#FFE15C" />
+      <stop offset="55%" stop-color="#FFD400" />
+      <stop offset="100%" stop-color="#EF6E03" />
+    </linearGradient>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#2D1F6B" stop-opacity="0.6" />
+      <stop offset="60%"  stop-color="#0800BF" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#0A0A0A" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="city" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#1A1A2E" />
+      <stop offset="100%" stop-color="#0B0B18" />
+    </linearGradient>
+    <radialGradient id="glow" cx="0.62" cy="0.38" r="0.55">
+      <stop offset="0%"   stop-color="#FFD400" stop-opacity="0.2" />
+      <stop offset="60%"  stop-color="#FFD400" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#FFD400" stop-opacity="0" />
+    </radialGradient>
+    <filter id="car-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10" />
+      <feOffset dx="0" dy="16" />
+      <feComponentTransfer><feFuncA type="linear" slope="0.45" /></feComponentTransfer>
+      <feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+  </defs>
+
+  <!-- ═══ ФОН ═══ -->
+  <rect width="640" height="560" rx="24" fill="url(#sky)" />
+  <rect width="640" height="560" rx="24" fill="url(#glow)" />
+
+  <!-- ═══ ЗВЁЗДЫ ═══ -->
+  <g class="hero-stars" fill="#FFD400" opacity="0.85">
+    <circle cx="60"  cy="60"  r="2.5" />
+    <circle cx="140" cy="32"  r="1.8" />
+    <circle cx="220" cy="90"  r="2" />
+    <circle cx="550" cy="50"  r="2" />
+    <circle cx="605" cy="120" r="1.5" />
+    <circle cx="45"  cy="165" r="1.8" />
+    <circle cx="580" cy="220" r="1.5" />
+    <circle cx="95"  cy="225" r="1.5" />
+    <circle cx="320" cy="40"  r="1.8" />
+    <circle cx="480" cy="25"  r="1.5" />
+  </g>
+  <g class="hero-stars-x" stroke="#FFD400" stroke-width="1.4" stroke-linecap="round" opacity="0.65">
+    <path d="M60 52 L60 68 M52 60 L68 60" />
+    <path d="M550 42 L550 58 M542 50 L558 50" />
+    <path d="M220 82 L220 98 M212 90 L228 90" />
+  </g>
+
+  <!-- ═══ СОЛНЦЕ ═══ -->
+  <g class="hero-sun">
+    <circle cx="400" cy="200" r="140" fill="url(#sun)" />
+    <circle cx="400" cy="200" r="162" fill="none" stroke="#FFD400" stroke-opacity="0.28" stroke-width="2" stroke-dasharray="4 10" />
+    <circle cx="400" cy="200" r="188" fill="none" stroke="#FFD400" stroke-opacity="0.14" stroke-width="1.5" stroke-dasharray="3 14" />
+  </g>
+
+  <!-- ═══ ГОРОД ═══ -->
+  <g class="hero-city" fill="url(#city)">
+    <rect x="0"   y="340" width="50" height="80" />
+    <rect x="50"  y="320" width="40" height="100" />
+    <rect x="90"  y="350" width="36" height="70" />
+    <rect x="130" y="270" width="14" height="150" />
+    <path d="M 130 270 L 137 250 L 144 270 Z" />
+    <circle cx="137" cy="260" r="6" />
+    <rect x="158" y="320" width="70" height="100" />
+    <path d="M 158 320 Q 193 280 228 320" />
+    <rect x="190" y="288" width="6" height="16" />
+    <path d="M 190 288 L 193 278 L 196 288 Z" />
+    <rect x="240" y="290" width="48" height="130" />
+    <rect x="300" y="250" width="12" height="170" />
+    <path d="M 300 250 L 306 232 L 312 250 Z" />
+    <rect x="325" y="310" width="60" height="110" />
+    <rect x="395" y="280" width="54" height="140" />
+    <rect x="460" y="260" width="12" height="160" />
+    <path d="M 460 260 L 466 240 L 472 260 Z" />
+    <rect x="485" y="340" width="40" height="80" />
+    <rect x="525" y="320" width="50" height="100" />
+    <rect x="575" y="350" width="40" height="70" />
+    <rect x="615" y="330" width="25" height="90" />
+  </g>
+  <g class="hero-windows" fill="#FFD400" opacity="0.8">
+    <rect x="10"  y="360" width="5" height="5" /><rect x="22"  y="360" width="5" height="5" /><rect x="34"  y="360" width="5" height="5" />
+    <rect x="10"  y="380" width="5" height="5" /><rect x="22"  y="380" width="5" height="5" />
+    <rect x="60"  y="340" width="5" height="5" /><rect x="72"  y="340" width="5" height="5" />
+    <rect x="60"  y="360" width="5" height="5" /><rect x="72"  y="360" width="5" height="5" />
+    <rect x="60"  y="380" width="5" height="5" /><rect x="72"  y="380" width="5" height="5" />
+    <rect x="250" y="310" width="4" height="4" /><rect x="262" y="310" width="4" height="4" /><rect x="274" y="310" width="4" height="4" />
+    <rect x="250" y="330" width="4" height="4" /><rect x="262" y="330" width="4" height="4" /><rect x="274" y="330" width="4" height="4" />
+    <rect x="250" y="350" width="4" height="4" /><rect x="274" y="350" width="4" height="4" />
+    <rect x="335" y="330" width="5" height="5" /><rect x="350" y="330" width="5" height="5" /><rect x="365" y="330" width="5" height="5" />
+    <rect x="335" y="350" width="5" height="5" /><rect x="365" y="350" width="5" height="5" />
+    <rect x="335" y="370" width="5" height="5" /><rect x="350" y="370" width="5" height="5" /><rect x="365" y="370" width="5" height="5" />
+    <rect x="405" y="300" width="4" height="4" /><rect x="418" y="300" width="4" height="4" /><rect x="431" y="300" width="4" height="4" />
+    <rect x="405" y="320" width="4" height="4" /><rect x="418" y="320" width="4" height="4" /><rect x="431" y="320" width="4" height="4" />
+    <rect x="405" y="340" width="4" height="4" /><rect x="431" y="340" width="4" height="4" />
+    <rect x="405" y="360" width="4" height="4" /><rect x="418" y="360" width="4" height="4" />
+    <rect x="540" y="340" width="5" height="5" /><rect x="552" y="340" width="5" height="5" />
+    <rect x="540" y="360" width="5" height="5" /><rect x="552" y="360" width="5" height="5" /><rect x="540" y="380" width="5" height="5" />
+    <rect x="580" y="360" width="5" height="5" /><rect x="592" y="360" width="5" height="5" /><rect x="580" y="380" width="5" height="5" />
+  </g>
+
+  <g class="hero-speed" opacity="0.55" stroke="#FFD400" stroke-width="4" stroke-linecap="round">
+    <line x1="10" y1="360" x2="80"  y2="360" />
+    <line x1="0"  y1="395" x2="55"  y2="395" />
+    <line x1="20" y1="430" x2="110" y2="430" />
+  </g>
+
+  <!--
+  ═══════════════════════════════════════════════════════════════
+  АВТОМОБИЛЬ — Google Noto Emoji "Taxi" (Apache 2.0 license)
+  Исходник 128×128, масштабируется в 3.75× и смещается вниз-вправо,
+  чтобы занять зону ~470×470 px внизу hero-сцены.
+  ═══════════════════════════════════════════════════════════════
+  -->
+  <g class="hero-car" filter="url(#car-shadow)">
+    <!-- Тень под машиной -->
+    <ellipse cx="340" cy="488" rx="245" ry="10" fill="#000" opacity="0.55" />
+
+    <g transform="translate(90 55) scale(3.5)">
+      <!-- Корпус кузова — жёлтый -->
+      <path fill="#FFD61C" d="M30.18 72.92c-.95.86-19.68 2.95-23.47 5.89c-2.24 1.74-3.05 4.53-3.37 12.94s-.11 14.1.21 16c.17 1.04 1.7 4.97 4.1 5.47c2.53.53 110.28.21 111.97.21c1.68 0 5.16-3.68 5.05-6.31s-.11-25.89-.21-27.99s-4.53-4.31-5.89-5.16c-1.37-.84-4-5.79-5.89-8.31c-1.42-1.89-8.1-9.68-14.84-12.94c-5.68-2.75-10.73-3.79-23.68-3.68c-12.1.1-20.31 1.26-26.73 5.58s-16.2 17.35-17.25 18.3"/>
+
+      <!-- Левая сторона (бампер) -->
+      <path fill="#FFFFFF" d="M5.91 94.64s5.73.09 6.51-.14c1.58-.47 4.47-8.37 3.26-9.45c-.5-.44-8.34-.26-8.34-.26z"/>
+      <path fill="#FEEAD0" d="m3.26 94.64l3.89.01l.22-9.87l-3.49.01s-.48 3.5-.55 5.28c-.07 1.77-.07 4.57-.07 4.57"/>
+
+      <!-- Крыша (серая плашка, скроем своей TAXI-плашкой ниже) -->
+      <path fill="#0B0B18" d="M57.96 50.36h33.09s-4.19-11.95-5.35-12.57c-.7-.38-22.28-.11-22.79.16c-1.29.71-4.95 12.41-4.95 12.41"/>
+
+      <!-- Темно-синяя нижняя полоса -->
+      <path fill="#1A1A2E" d="M33.15 79.14c1 1 4.62.97 12.08 1.14c7.46.16 59.76.41 60.57.16s5.43-5.6 5.6-7.05c.16-1.46-9.01-14.52-15.77-17.54c-6.22-2.78-30.68-4.33-40.89-.38c-6.38 2.46-13.8 10.22-18.75 16.79c-2.01 2.66-4.05 5.67-2.84 6.88"/>
+
+      <!-- Заднее стекло -->
+      <path fill="#AFE3FB" d="M75.48 57.66s-4.71-.27-9.77.08c-3.98.27-8.27.82-11.88 2.92c-8.19 4.78-13.22 12.89-12.73 14.03s1.46 1.87 9.89 1.95s24 .05 24.21-.18c0-.25.28-18.8.28-18.8"/>
+
+      <!-- Боковое зеркало -->
+      <path fill="#DD801B" d="M38.06 82.89c.28.73 2.69 2.34 7.52 2.02c3.94-.27 4.91-4.03 5.11-6.76c.27-3.72-2.37-5.91-2.37-5.91s-3.05.9-3.18 1.12s-6.72 6.81-6.72 6.81s-.72 1.78-.36 2.72"/>
+      <path fill="#FFD61C" d="M43.03 81.77c3.9-.13 7.3-7.21 5.73-9.23s-5.15-.08-7.17 2.1c-2.73 2.96-3.18 5.51-3.18 5.51s.6 1.76 4.62 1.62"/>
+
+      <!-- Переднее стекло -->
+      <path fill="#AFE3FB" d="M80.12 57.72s-.07 18.67-.04 18.68c.85.15 23.6.09 23.83-.09c.22-.18 2.69-2.87 2.69-3.31c0-.45-6.31-10.12-12.5-13.3c-4.43-2.28-13.98-1.98-13.98-1.98"/>
+
+      <!-- Задняя фара -->
+      <path fill="#FF2825" d="M124.55 82.54s-5.55-.33-6.34.2c-1.02.7-.86 10.39.25 10.93c1.1.53 6.13.09 6.13.09s.02-2.94.02-5.89c0-3.68-.06-5.33-.06-5.33"/>
+
+      <!-- Шашечный пояс (оригинальные квадратики Noto) -->
+      <path fill="#4E433D" d="M43.73 94.2h6.56v6.78h-6.56z"/>
+      <path fill="#4E433D" d="M50.26 87.45h6.56v6.78h-6.56zm6.56 6.75h6.56v6.78h-6.56zm6.53-6.78h6.56v6.78h-6.56z"/>
+      <path fill="#4E433D" d="M69.83 94.17h6.56v6.78h-6.56z"/>
+      <path fill="#4E433D" d="M76.33 87.4h6.56v6.78h-6.56z"/>
+      <path fill="#4E433D" d="M82.84 94.12h6.56v6.78h-6.56z"/>
+
+      <!-- Колесо заднее -->
+      <path fill="#4E433D" d="M17.81 110.31c.09 5.52 4.49 13.46 14.07 13.52s14.55-7.28 14.25-14.8c-.31-7.64-6.25-13.04-14.8-12.8c-8 .24-13.64 6.44-13.52 14.08"/>
+      <path fill="#C8C8C8" d="M24.48 109.85c.05 2.91 2.41 7.1 7.56 7.13s7.64-3.62 7.48-7.58c-.17-4.03-3.46-7.03-7.78-6.97c-4.3.07-7.33 3.39-7.26 7.42"/>
+
+      <!-- Колесо переднее -->
+      <path fill="#4E433D" d="M88.53 110.78c.09 5.48 4.39 13.36 13.77 13.42s14.24-7.22 13.95-14.68c-.3-7.59-6.11-12.94-14.48-12.7c-7.83.22-13.36 6.37-13.24 13.96"/>
+      <path fill="#C8C8C8" d="M94.79 110.34c.05 2.91 2.41 7.1 7.56 7.13s7.64-3.62 7.48-7.58c-.17-4.03-3.46-7.03-7.78-6.97c-4.29.07-7.32 3.39-7.26 7.42"/>
+    </g>
+
+    <!-- Наша плашка TAXI поверх Noto-крыши (брендинг Anhor) -->
+    <g transform="translate(298 192)">
+      <rect x="0" y="0" width="96" height="28" rx="6" fill="#0B0B18" stroke="#FFD400" stroke-width="2" />
+      <text x="48" y="20" font-family="'Noto Sans', sans-serif" font-size="16" font-weight="700" fill="#FFD400" text-anchor="middle" letter-spacing="5">TAXI</text>
+    </g>
+  </g>
+
+  <!-- ═══ РАЗМЕТКА ДОРОГИ ═══ -->
+  <g class="hero-road" fill="#FFD400" opacity="0.6">
+    <rect x="20"  y="535" width="28" height="5" rx="2.5" />
+    <rect x="68"  y="535" width="28" height="5" rx="2.5" />
+    <rect x="116" y="535" width="28" height="5" rx="2.5" />
+    <rect x="164" y="535" width="28" height="5" rx="2.5" />
+    <rect x="212" y="535" width="28" height="5" rx="2.5" />
+    <rect x="260" y="535" width="28" height="5" rx="2.5" />
+    <rect x="308" y="535" width="28" height="5" rx="2.5" />
+    <rect x="356" y="535" width="28" height="5" rx="2.5" />
+    <rect x="404" y="535" width="28" height="5" rx="2.5" />
+    <rect x="452" y="535" width="28" height="5" rx="2.5" />
+    <rect x="500" y="535" width="28" height="5" rx="2.5" />
+    <rect x="548" y="535" width="28" height="5" rx="2.5" />
+    <rect x="596" y="535" width="28" height="5" rx="2.5" />
+  </g>
+</svg>

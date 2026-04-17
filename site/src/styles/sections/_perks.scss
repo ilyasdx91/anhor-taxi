@@ -1,0 +1,110 @@
+// ============================================================================
+// Perks — карточки плюшек
+// ============================================================================
+@use '../mixins' as *;
+
+.perks {
+  @include section-padding;
+
+  &__inner {
+    @include container;
+  }
+
+  &__grid {
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: 1fr;
+    margin-top: var(--space-6);
+
+    @include media('sm') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include media('lg') {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include media('xl') {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+.perk-card {
+  @include hover-lift;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+
+  &--accent {
+    background: var(--accent);
+    color: var(--accent-contrast);
+    border-color: transparent;
+
+    .perk-card__description {
+      color: rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  &--care {
+    border-color: var(--anhor-orange);
+    position: relative;
+
+    &::before {
+      content: 'Забота';
+      position: absolute;
+      top: -10px;
+      left: var(--space-4);
+      padding: 2px var(--space-2);
+      background: var(--anhor-gradient);
+      color: #fff;
+      font-size: var(--fs-micro);
+      font-weight: var(--fw-bold);
+      border-radius: var(--radius-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  &__icon {
+    width: 56px;
+    height: 56px;
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius-md);
+    background: var(--bg-muted);
+
+    &::before {
+      content: '';
+      width: 32px;
+      height: 32px;
+      background: var(--accent);
+      -webkit-mask: var(--icon-url, none) center / contain no-repeat;
+      mask: var(--icon-url, none) center / contain no-repeat;
+    }
+  }
+
+  // На жёлтой accent-карточке — иконка и фон выглядят иначе
+  &--accent &__icon {
+    background: rgba(0, 0, 0, 0.12);
+
+    &::before {
+      background: #000;
+    }
+  }
+
+  &__title {
+    font-size: var(--fs-h4);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-tight);
+  }
+
+  &__description {
+    font-size: var(--fs-small);
+    color: var(--text-muted);
+    line-height: var(--lh-relaxed);
+  }
+}

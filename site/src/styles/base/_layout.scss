@@ -1,0 +1,63 @@
+// ============================================================================
+// Базовый layout
+// ============================================================================
+
+@use '../mixins' as *;
+
+.container {
+  @include container;
+}
+
+.section {
+  @include section-padding;
+}
+
+.section-muted {
+  background: var(--bg-muted);
+}
+
+.section-header {
+  max-width: 720px;
+  margin-bottom: var(--space-6);
+
+  &--center {
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: var(--space-3);
+  }
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-4);
+
+  &--2 {
+    grid-template-columns: 1fr;
+    @include media('md') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &--3 {
+    grid-template-columns: 1fr;
+    @include media('md') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include media('lg') {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &--4 {
+    grid-template-columns: 1fr;
+    @include media('sm') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include media('lg') {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

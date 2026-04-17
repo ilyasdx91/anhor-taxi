@@ -1,0 +1,117 @@
+// ============================================================================
+// Hero
+// ============================================================================
+@use '../mixins' as *;
+
+.hero {
+  position: relative;
+  padding-block: var(--space-7) var(--space-8);
+  overflow: hidden;
+
+  &__inner {
+    @include container;
+    display: grid;
+    gap: var(--space-6);
+    align-items: center;
+
+    @include media('lg') {
+      grid-template-columns: 1.35fr 1fr;
+    }
+  }
+
+  &__copy {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  &__partner-plate {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-pill);
+    background: var(--bg-muted);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-medium);
+    color: var(--text-muted);
+    width: fit-content;
+
+    img {
+      height: 20px;
+      width: auto;
+    }
+  }
+
+  &__title {
+    color: var(--text);
+    font-size: clamp(36px, 5vw, 60px);
+    line-height: 1.05;
+
+    // Чтобы «Добро пожаловать» не ломалось на две строки
+    white-space: nowrap;
+
+    @media (max-width: 540px) {
+      white-space: normal;
+    }
+  }
+
+  &__title-line {
+    display: block;
+  }
+
+  &__title-accent {
+    background: var(--anhor-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  &__bonus {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    padding: var(--space-3) var(--space-5);
+    border-radius: var(--radius-md);
+    background: var(--accent);
+    color: var(--accent-contrast);
+    width: fit-content;
+  }
+
+  &__bonus-label {
+    font-size: var(--fs-small);
+    font-weight: var(--fw-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    opacity: 0.75;
+  }
+
+  &__bonus-amount {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+    line-height: 1.1;
+  }
+
+  &__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-3);
+  }
+
+  &__visual {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 8 / 7;
+    display: grid;
+    place-items: center;
+  }
+
+  // Inline SVG загружается через JS — заполняет весь visual-контейнер
+  &__visual svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}

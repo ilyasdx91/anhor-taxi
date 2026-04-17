@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0A0A0A" />
+
+    <title>Anhor Taxi — заработок с Яндекс Про в Ташкенте</title>
+    <meta
+      name="description"
+      content="Работайте в Anhor Taxi, официальном партнёре Яндекс Про. Бонус до 3 000 000 сум, 0 % комиссия первые 2 недели, бесплатная замена масла, помощь с документами и льготные кредиты."
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://forms.fleet.yandex.uz" />
+
+    <link rel="stylesheet" href="./styles/main.scss" />
+  </head>
+
+  <body>
+    <!-- ══ HEADER ══════════════════════════════════════════════════════════ -->
+    <header class="header">
+      <div class="header__inner">
+        <a href="#top" class="header__brand" data-i18n="brand.name" aria-label="Anhor Taxi">
+          <img
+            class="header__logo header__logo--light"
+            src="/images/anhor-logo.svg"
+            alt="Anhor Taxi"
+          />
+          <img
+            class="header__logo header__logo--dark"
+            src="/images/anhor-logo-dark.svg"
+            alt="Anhor Taxi"
+          />
+        </a>
+
+        <nav class="header__nav" aria-label="Основная навигация">
+          <a href="#perks" data-i18n="nav.perks">Преимущества</a>
+          <a href="#income" data-i18n="nav.income">Доход</a>
+          <a href="#compare" data-i18n="nav.compare">Сравнение</a>
+          <a href="#faq" data-i18n="nav.faq">Вопросы</a>
+          <a href="#contacts" data-i18n="nav.contacts">Контакты</a>
+        </nav>
+
+        <div class="header__actions">
+          <img
+            class="header__partner-badge"
+            src="/images/yandex-pro-partner.svg"
+            alt="Партнёр Яндекс Про"
+          />
+          <div class="lang-switcher" role="group" aria-label="Выбор языка">
+            <button class="lang-switcher__btn" type="button" data-lang="uz">UZ</button>
+            <button class="lang-switcher__btn" type="button" data-lang="ru">RU</button>
+            <button class="lang-switcher__btn" type="button" data-lang="en">EN</button>
+          </div>
+          <button
+            class="btn btn--ghost btn--sm"
+            type="button"
+            id="theme-toggle"
+            aria-label="Переключить тему"
+          >
+            <span aria-hidden="true">🌙</span>
+          </button>
+          <a
+            class="btn btn--primary btn--sm"
+            href="#"
+            data-cta="header"
+            data-i18n="cta.become"
+            target="_blank"
+            rel="noopener"
+          >
+            Стать водителем
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- ══ HERO ═══════════════════════════════════════════════════════════ -->
+      <section class="hero">
+        <div class="hero__inner">
+          <div class="hero__copy">
+            <div class="hero__partner-plate">
+              <img
+                src="/images/yandex-pro-partner.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              <span data-i18n="hero.partner">Anhor Taxi × Партнёр Яндекс Про</span>
+            </div>
+
+            <h1 class="hero__title">
+              <span class="hero__title-line" data-i18n="hero.title.line1"
+                >Добро пожаловать</span
+              >
+              <span class="hero__title-line">
+                <span data-i18n="hero.title.preposition">в </span><span class="hero__title-accent">Anhor Taxi</span>
+              </span>
+            </h1>
+
+            <p class="lead" data-i18n="hero.lead">
+              Заработок&nbsp;— с&nbsp;первого заказа. Свободный график, прозрачные
+              выплаты, поддержка на&nbsp;дороге и&nbsp;в&nbsp;бумагах.
+            </p>
+
+            <div class="hero__bonus">
+              <span class="hero__bonus-label" data-i18n="hero.bonus.label">Бонус новому водителю</span>
+              <strong class="hero__bonus-amount" data-i18n="hero.bonus.amount">до 3 000 000 сум</strong>
+            </div>
+
+            <div class="hero__cta">
+              <a
+                class="btn btn--primary btn--lg"
+                href="#"
+                data-cta="hero"
+                data-i18n="cta.become"
+                target="_blank"
+                rel="noopener"
+              >
+                Стать водителем
+              </a>
+              <a
+                class="btn btn--secondary btn--lg"
+                href="#perks"
+                data-i18n="cta.conditions"
+              >
+                Посмотреть условия
+              </a>
+            </div>
+          </div>
+
+          <div class="hero__visual" id="hero-visual" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <!-- ══ PERKS ══════════════════════════════════════════════════════════ -->
+      <section class="perks section-muted" id="perks">
+        <div class="perks__inner">
+          <header class="section-header">
+            <h2 data-i18n="perks.title">Что даёт Anhor Taxi</h2>
+            <p class="lead" data-i18n="perks.lead">
+              Семь причин, почему водители выбирают именно нас. Три из них — только у нас.
+            </p>
+          </header>
+
+          <div class="perks__grid">
+            <article class="perk-card perk-card--accent">
+              <div class="perk-card__icon" style="--icon-url: url('/icons/gift.svg')" aria-hidden="true"></div>
+              <h3 class="perk-card__title" data-i18n="perk.bonus.title">
+                Бонус до 3 000 000 сум
+              </h3>
+              <p class="perk-card__description" data-i18n="perk.bonus.desc">
+                Приветственный бонус от Яндекса новым водителям Anhor.
+              </p>
+            </article>
+
+            <article class="perk-card">
+              <div class="perk-card__icon" style="--icon-url: url('/icons/commission.svg')" aria-hidden="true"></div>
+              <h3 class="perk-card__title" data-i18n="perk.zero.title">
+                0 % комиссии первые 2 недели
+              </h3>
+              <p class="perk-card__description" data-i18n="perk.zero.desc">
+                Начинаете с чистой прибылью — парк берёт 0 % две недели.
+              </p>
+            </article>
+
+            <article class="perk-card">
+              <div class="perk-card__icon" style="--icon-url: url('/icons/cashless.svg')" aria-hidden="true"></div>
+              <h3 class="perk-card__title" data-i18n="perk.payout.title">
+                Беспроцентный вывод
+              </h3>
+              <p class="perk-card__description" data-i18n="perk.payout.desc">
+                Снимайте заработанное мгновенно, без комиссий.
+              </p>
+            </article>
+
+            <article class="perk-card">
+              <div class="perk-card__icon" style="--icon-url: url('/icons/friends.svg')" aria-hidden="true"></div>
+              <h3 class="perk-card__title" data-i18n="perk.referral.title">
+                Приведи 3 друзей — 300 000 сум
+              </h3>
+              <p class="perk-card__description" data-i18n="perk.referral.desc">
+                Реферальная программа для тех, кто строит команду.
+              </p>
+            </article>
+
+            <article class="perk-card perk-card--care">
+              <div class="perk-card__icon" style="--icon-url: url('/icons/oil.svg')" aria-hidden="true"></div>
+              <h3 class="perk-card__title" data-i18n="perk.oil.title">
+                Замена масла каждые 5 000 км
+              </h3>
+              <p class="perk-card__description" data-i18n="perk.oil.desc">
+                Бесплатно в наших СТО. Машина всегда готова к работе.
+              </p>
+            </article>
+
+            <article class="perk-card perk-card--care">
+              <div class="perk-card__icon" style="--icon-url: url('/icons/credit.svg')" aria-hidden="true"></div>
+              <h3 class="perk-card__title" data-i18n="perk.credit.title">
+                Льготные кредиты
+              </h3>
+              <p class="perk-card__description" data-i18n="perk.credit.desc">
+                Поможем с финансами, если нужна новая машина или ремонт.
+              </p>
+            </article>
+
+            <article class="perk-card perk-card--care">
+              <div class="perk-card__icon" style="--icon-url: url('/icons/docs.svg')" aria-hidden="true"></div>
+              <h3 class="perk-card__title" data-i18n="perk.docs.title">
+                Помощь с документами
+              </h3>
+              <p class="perk-card__description" data-i18n="perk.docs.desc">
+                Лицензия, страховка, справки — берём бумаги на себя.
+              </p>
+            </article>
+
+            <article class="perk-card">
+              <div class="perk-card__icon" style="--icon-url: url('/icons/support.svg')" aria-hidden="true"></div>
+              <h3 class="perk-card__title" data-i18n="perk.support.title">
+                Поддержка 24/7
+              </h3>
+              <p class="perk-card__description" data-i18n="perk.support.desc">
+                Менеджер всегда на связи в Telegram и по телефону.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ INCOME CALCULATOR ══════════════════════════════════════════════ -->
+      <section class="calculator" id="income">
+        <div class="calculator__inner">
+          <div>
+            <header class="section-header">
+              <h2 data-i18n="calc.title">Сколько можно заработать?</h2>
+              <p class="lead" data-i18n="calc.lead">
+                Подвиньте ползунки и увидите примерный доход в месяц.
+              </p>
+            </header>
+
+            <form class="calculator__form" id="calculator">
+              <div class="calculator__field">
+                <label class="calculator__label" for="calc-hours">
+                  <span data-i18n="calc.hours">Часов в день</span>
+                  <output for="calc-hours" id="calc-hours-out">8</output>
+                </label>
+                <input
+                  class="calculator__slider"
+                  type="range"
+                  id="calc-hours"
+                  min="4"
+                  max="12"
+                  step="1"
+                  value="8"
+                />
+              </div>
+
+              <div class="calculator__field">
+                <label class="calculator__label" for="calc-days">
+                  <span data-i18n="calc.days">Дней в неделю</span>
+                  <output for="calc-days" id="calc-days-out">5</output>
+                </label>
+                <input
+                  class="calculator__slider"
+                  type="range"
+                  id="calc-days"
+                  min="1"
+                  max="7"
+                  step="1"
+                  value="5"
+                />
+              </div>
+
+              <div class="calculator__field">
+                <label class="calculator__label" for="calc-tier">
+                  <span data-i18n="calc.tier">Класс авто</span>
+                </label>
+                <select class="calculator__select" id="calc-tier">
+                  <option value="economy" data-i18n="calc.economy">Эконом</option>
+                  <option value="comfort" selected data-i18n="calc.comfort">
+                    Комфорт
+                  </option>
+                  <option value="business" data-i18n="calc.business">Бизнес</option>
+                </select>
+              </div>
+            </form>
+          </div>
+
+          <aside class="calculator__result">
+            <span class="calculator__result-label" data-i18n="calc.result"
+              >Примерный доход в месяц</span
+            >
+            <strong class="calculator__result-amount" id="calc-result"
+              >0 сум</strong
+            >
+            <span class="calculator__result-note" data-i18n="calc.note">
+              Первые 2 недели — 0 % комиссии. Расчёт ориентировочный,
+              реальный доход зависит от города, класса авто и спроса.
+            </span>
+            <a
+              class="btn btn--primary"
+              href="#"
+              data-cta="calculator"
+              data-i18n="cta.become"
+              target="_blank"
+              rel="noopener"
+            >
+              Стать водителем
+            </a>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ══ COMPARE TABLE ══════════════════════════════════════════════════ -->
+      <section class="compare" id="compare">
+        <div class="compare__inner">
+          <header class="section-header">
+            <h2 data-i18n="compare.title">Почему Anhor, а не соседний парк</h2>
+            <p class="lead" data-i18n="compare.lead">
+              Сравните условия и решите сами.
+            </p>
+          </header>
+
+          <div class="compare__table-wrap">
+            <table class="compare__table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Anhor Taxi</th>
+                  <th data-i18n="compare.other">Обычный парк</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th data-i18n="compare.commission">Комиссия первые 2 недели</th>
+                  <td>0 %</td>
+                  <td>1–2 %</td>
+                </tr>
+                <tr>
+                  <th data-i18n="compare.welcome">Welcome-бонус</th>
+                  <td>до 3 000 000 сум</td>
+                  <td>~300 000 сум</td>
+                </tr>
+                <tr>
+                  <th data-i18n="compare.oil">Замена масла</th>
+                  <td data-i18n="compare.oil.a">бесплатно каждые 5 000 км</td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <th data-i18n="compare.credit">Льготные кредиты</th>
+                  <td data-i18n="compare.yes">да</td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <th data-i18n="compare.docs">Помощь с документами</th>
+                  <td data-i18n="compare.yes">да</td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <th data-i18n="compare.payout">Вывод средств</th>
+                  <td data-i18n="compare.payout.a">0 %, мгновенно</td>
+                  <td data-i18n="compare.payout.b">с задержкой</td>
+                </tr>
+                <tr>
+                  <th data-i18n="compare.referral">Реферальная программа</th>
+                  <td>300 000 за 3 друзей</td>
+                  <td>250 000 за 1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ START STEPS ════════════════════════════════════════════════════ -->
+      <section class="start" id="start">
+        <div class="start__inner">
+          <header class="section-header section-header--center">
+            <h2 data-i18n="start.title">Как начать</h2>
+            <p class="lead" data-i18n="start.lead">
+              Три простых шага — и вы уже на линии.
+            </p>
+          </header>
+
+          <ol class="start__steps">
+            <li class="step">
+              <span class="step__number">1</span>
+              <h3 class="step__title" data-i18n="start.step1.title">
+                Оставьте заявку
+              </h3>
+              <p class="step__description" data-i18n="start.step1.desc">
+                1 минута — телефон, имя. Дальше Яндекс Про проведёт по регистрации.
+              </p>
+            </li>
+
+            <li class="step">
+              <span class="step__number">2</span>
+              <h3 class="step__title" data-i18n="start.step2.title">
+                Пройдите проверку документов
+              </h3>
+              <p class="step__description" data-i18n="start.step2.desc">
+                Поможем с лицензией, страховкой и справками, если чего-то не хватает.
+              </p>
+            </li>
+
+            <li class="step">
+              <span class="step__number">3</span>
+              <h3 class="step__title" data-i18n="start.step3.title">
+                Выходите на линию
+              </h3>
+              <p class="step__description" data-i18n="start.step3.desc">
+                Скачайте приложение Яндекс Про и начните зарабатывать с первого заказа.
+              </p>
+            </li>
+          </ol>
+
+          <div class="start__cta">
+            <a
+              class="btn btn--primary btn--lg"
+              href="#"
+              data-cta="start"
+              data-i18n="cta.start"
+              target="_blank"
+              rel="noopener"
+            >
+              Начать
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ REVIEWS ════════════════════════════════════════════════════════ -->
+      <section class="reviews" id="reviews">
+        <div class="reviews__inner">
+          <header class="section-header">
+            <h2 data-i18n="reviews.title">Отзывы водителей</h2>
+            <p class="lead" data-i18n="reviews.lead">
+              Реальные истории из парка.
+            </p>
+          </header>
+
+          <div class="reviews__grid">
+            <article class="review-card">
+              <header class="review-card__header">
+                <div class="review-card__avatar">А</div>
+                <div>
+                  <div class="review-card__name">Азизбек Р.</div>
+                  <div class="review-card__meta">В парке 6 месяцев</div>
+                </div>
+              </header>
+              <p class="review-card__quote">
+                «Первые две недели без комиссии реально зашли — вошёл в рабочий
+                ритм без потерь. Поддержка отвечает быстро.»
+              </p>
+            </article>
+
+            <article class="review-card">
+              <header class="review-card__header">
+                <div class="review-card__avatar">О</div>
+                <div>
+                  <div class="review-card__name">Отабек М.</div>
+                  <div class="review-card__meta">В парке 1 год</div>
+                </div>
+              </header>
+              <p class="review-card__quote">
+                «Машину обслуживаю здесь же — масло бесплатно. Нервотрёпки с
+                бумагами никакой, всё сделали за меня.»
+              </p>
+            </article>
+
+            <article class="review-card">
+              <header class="review-card__header">
+                <div class="review-card__avatar">Ф</div>
+                <div>
+                  <div class="review-card__name">Фаррух Х.</div>
+                  <div class="review-card__meta">В парке 3 месяца</div>
+                </div>
+              </header>
+              <p class="review-card__quote">
+                «Вывод без комиссии и мгновенно — это главное. Работаю
+                6 часов в день, на семью хватает.»
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ FAQ ════════════════════════════════════════════════════════════ -->
+      <section class="faq" id="faq">
+        <div class="faq__inner">
+          <header class="section-header section-header--center">
+            <h2 data-i18n="faq.title">Частые вопросы</h2>
+          </header>
+
+          <div class="faq__list">
+            <details class="faq-item">
+              <summary class="faq-item__question" data-i18n="faq.q1">
+                Кого принимают в парк?
+              </summary>
+              <div class="faq-item__answer" data-i18n="faq.a1">
+                Водителей с действующим удостоверением, от 21 года, с гражданством
+                Узбекистана или видом на жительство. Стаж — от 1 года.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__question" data-i18n="faq.q2">
+                Какие документы нужны?
+              </summary>
+              <div class="faq-item__answer" data-i18n="faq.a2">
+                Паспорт, ПИНФЛ, водительское удостоверение, СТС (или договор аренды
+                авто), страховка, лицензия на перевозку такси. Если чего-то нет —
+                поможем оформить.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__question" data-i18n="faq.q3">
+                Какая комиссия?
+              </summary>
+              <div class="faq-item__answer" data-i18n="faq.a3">
+                Первые 2 недели — 0 %. Далее — на согласованных условиях парка.
+                Вывод средств — всегда без комиссии.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__question" data-i18n="faq.q4">
+                Когда и как приходят деньги?
+              </summary>
+              <div class="faq-item__answer" data-i18n="faq.a4">
+                Выплаты доступны мгновенно в приложении Яндекс Про. Можно выводить
+                на карту узбекских банков 24/7.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__question" data-i18n="faq.q5">
+                Нужно ли своё авто?
+              </summary>
+              <div class="faq-item__answer" data-i18n="faq.a5">
+                Своё авто — плюс, но не обязательно. Парк помогает с льготным
+                кредитом на покупку или подбором арендной машины.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__question" data-i18n="faq.q6">
+                Что даёт статус «Партнёр Яндекс Про»?
+              </summary>
+              <div class="faq-item__answer" data-i18n="faq.a6">
+                Прямой доступ к заказам Яндекс Го по всему Ташкенту, приоритет в
+                сервисе, техподдержка Яндекса и регулярные бонусные программы.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__question" data-i18n="faq.q7">
+                Можно ли совмещать с другой работой?
+              </summary>
+              <div class="faq-item__answer" data-i18n="faq.a7">
+                Да. График свободный: работайте столько часов и дней, сколько
+                удобно. Минимальной выработки нет.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__question" data-i18n="faq.q8">
+                Сколько реально можно заработать в месяц?
+              </summary>
+              <div class="faq-item__answer" data-i18n="faq.a8">
+                Зависит от графика и класса авто. Воспользуйтесь калькулятором
+                выше — он даст ориентировочную цифру. Реальные доходы наших
+                водителей — в интервале 6–15 млн сум при полной занятости.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ══ FOOTER ═══════════════════════════════════════════════════════════ -->
+    <footer class="footer" id="contacts">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <div class="footer__logos">
+            <img
+              class="footer__logo footer__logo--anhor"
+              src="/images/anhor-logo-dark.svg"
+              alt="Anhor Taxi"
+            />
+            <img
+              class="footer__logo footer__logo--partner"
+              src="/images/yandex-pro-partner.svg"
+              alt="Партнёр Яндекс Про"
+            />
+          </div>
+          <p class="footer__tagline" data-i18n="footer.tagline">
+            Официальный партнёр Яндекс Про в Ташкенте.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer__col-title" data-i18n="footer.contacts">Контакты</h4>
+          <ul class="footer__list">
+            <li>
+              <a href="tel:+998901330808">+998 90 133 08 08</a>
+            </li>
+            <li>
+              <a href="mailto:anhor.taxi@yandex.com">anhor.taxi@yandex.com</a>
+            </li>
+            <li>
+              <a
+                href="https://t.me/ANXORTAXI"
+                target="_blank"
+                rel="noopener"
+                >Telegram-канал</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer__col-title" data-i18n="footer.legal">Документы</h4>
+          <ul class="footer__list">
+            <li>
+              <a href="#" data-i18n="footer.terms">Условия использования</a>
+            </li>
+            <li>
+              <a href="#" data-i18n="footer.privacy">Политика конфиденциальности</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__meta">
+          <span>© 2026 Anhor Taxi. Партнёр Яндекс Про.</span>
+          <span data-i18n="footer.madein">Сделано в Ташкенте.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
